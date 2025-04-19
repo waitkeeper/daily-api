@@ -9,6 +9,9 @@ import personalizedDigest from '../src/commands/personalizedDigest';
 import { remoteConfig } from '../src/remoteConfig';
 import { initGeoReader } from '../src/common/geo';
 
+const dotenv = require('dotenv');
+dotenv.config({ path: `.env` });
+
 async function run(positionals: string[]) {
   await remoteConfig.init();
 
@@ -17,7 +20,7 @@ async function run(positionals: string[]) {
       tracer('api').start();
       startMetrics('api');
 
-      await initGeoReader();
+      // await initGeoReader();
 
       const app = await api();
       await app.listen({

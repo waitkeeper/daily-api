@@ -1,5 +1,7 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
+const dotenv = require('dotenv');
+dotenv.config({ path: `.env` });
 
 export const AppDataSource = new DataSource({
   type: 'postgres',

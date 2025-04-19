@@ -89,18 +89,19 @@ const MOCK_USER_ID = process.env.MOCK_USER_ID;
 
 type WhoamiResponse =
   | {
-      valid: true;
-      userId: string;
-      expires: Date;
-      cookie?: string;
-      verified: boolean;
-      email?: string;
-    }
+    valid: true;
+    userId: string;
+    expires: Date;
+    cookie?: string;
+    verified: boolean;
+    email?: string;
+  }
   | { valid: false };
 
 export const dispatchWhoami = async (
   req: FastifyRequest,
 ): Promise<WhoamiResponse> => {
+  console.log(`MOCK_USER_ID: ${MOCK_USER_ID}`);
   if (MOCK_USER_ID) {
     const expires = addDays(new Date(), 1);
 

@@ -1,5 +1,5 @@
-// const dotenv = require('dotenv');
-// dotenv.config({ path: `.env.production` });
+const dotenv = require('dotenv');
+dotenv.config({ path: `.env` });
 
 module.exports = {
   type: 'postgres',

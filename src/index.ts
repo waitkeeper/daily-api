@@ -102,6 +102,7 @@ export default async function app(
       if (!isProd) {
         return true;
       }
+      return true
 
       const originString = origin as string;
 

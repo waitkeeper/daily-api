@@ -68,7 +68,7 @@ Daily API requires a running instance of PostgreSQL, you can easily set it up us
 Make sure to apply the latest migrations by running:
 `pnpm run db:migrate:latest`
 
-[.env](.env) is used to set the required environment variables. It is loaded automatically by the project.
+[.env](.env) is used to set the required environment variables. It is loaded automatically by the projPect.
 
 If you want some seed data, you can run:
 `pnpm run db:seed:import`
